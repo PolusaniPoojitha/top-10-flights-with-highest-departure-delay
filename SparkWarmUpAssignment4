@@ -1,0 +1,2 @@
+sc.textFile("/home/administrator/Downloads/spark assignment 4/2001.csv").map(dr=>dr.split(",")).zipWithIndex().filter(_._2>0).map(x=>x._1).filter(x=>x(16).toLowerCase!="na" && x(15).toLowerCase!="na" && x(17).toLowerCase!="na").sortBy(x=>x(15).toInt,false).take(10).foreach(x=>println("("+x(8)+","+x(16)+","+x(17)+","+x(0)+"/"+x(1)+"/"+x(2)+","+x(15)+")"))
+
